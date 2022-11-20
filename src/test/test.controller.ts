@@ -7,6 +7,6 @@ export class TestController {
 
     @Get()
     async getHello(): Promise<string> {
-        return await this.testService.testDb();
+        return (await this.testService.testDb()).rows[0].name;
     }
 }
